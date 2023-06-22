@@ -98,4 +98,19 @@ class TestLinkedList {
         linkedList.addToTail(3)
         assertTrue(linkedList.containsNodeItem(3))
     }
+
+    @Test
+    fun testLinkedListRemovesNodeCorrectly() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+
+        assertEquals(linkedList.removeNodeItem(3), null)
+        assertEquals(linkedList.size, 2)
+
+        linkedList.addToTail(3)
+        linkedList.addToTail(4)
+
+        assertEquals(linkedList.removeNodeItem(3), 3)
+        assertEquals(linkedList.size, 3)
+    }
 }
