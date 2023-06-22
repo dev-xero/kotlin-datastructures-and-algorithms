@@ -54,4 +54,17 @@ class LinkedList<T>() {
 
         return newTail
     }
+
+    fun containsNodeItem(item: T): Boolean {
+        var currentNode = head
+
+        while (currentNode != null) {
+            if (currentNode.item == item) {
+                return true
+            }
+            currentNode = currentNode.next
+        }
+
+        return false
+    }
 }
