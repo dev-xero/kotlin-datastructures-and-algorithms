@@ -75,6 +75,8 @@ class LinkedList<T> {
             while (currentNode != null) {
                 if (currentNode.item == item) {
                     previousNode?.setNextNode(currentNode.next)
+                    listSize -= 1
+
                     return currentNode.item
                 }
 
