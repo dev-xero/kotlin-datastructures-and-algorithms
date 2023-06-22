@@ -16,8 +16,8 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v2
         with:
+          distribution: 'temurin'
           java-version: '17'
-          distribution: adopt@1.11
 
 
       - name: Grant execute permission to Gradlew
