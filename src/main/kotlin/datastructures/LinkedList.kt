@@ -1,6 +1,6 @@
 package datastructures
 
-class LinkedList<T>() {
+class LinkedList<T> {
     private var head: Node<T>? = null
     private var tail: Node<T>? = null
     private var listSize: Int = 0
@@ -30,7 +30,6 @@ class LinkedList<T>() {
 
         newHead.setNextNode(currentHead)
         head = newHead
-
         listSize += 1
 
         return newHead
