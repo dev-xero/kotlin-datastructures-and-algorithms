@@ -72,6 +72,13 @@ class LinkedList<T> {
             var currentNode = head
             var previousNode: Node<T>? = null
 
+            if (head?.item == item) {
+                head = currentNode?.next
+                listSize -= 1
+
+                return item
+            }
+
             while (currentNode != null) {
                 if (currentNode.item == item) {
                     previousNode?.setNextNode(currentNode.next)
