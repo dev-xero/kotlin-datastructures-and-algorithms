@@ -1,8 +1,7 @@
 package testdatastructures
 
 import datastructures.LinkedList
-import org.junit.jupiter.api.Assertions.assertFalse
-import org.junit.jupiter.api.Assertions.assertTrue
+import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
 
@@ -25,5 +24,14 @@ class TestLinkedList {
         linkedList.addToTail(2)
 
         assertFalse(linkedList.isEmpty())
+    }
+
+    @Test
+    fun testListSizeUpdatesCorrectlyAfterAddingToHead() {
+        linkedList.addToHead(3)
+        linkedList.addToHead(2)
+        linkedList.addToHead(1)
+
+        assertEquals(linkedList.size, 3)
     }
 }
