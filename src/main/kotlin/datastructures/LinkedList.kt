@@ -14,6 +14,8 @@ class LinkedList<T>() {
     val size: Int
         get() = listSize
 
+    fun isEmpty(): Boolean { return head == null }
+
     fun addToHead(item: T): Node<T> {
         val newHead = Node(item)
         val currentHead = head
