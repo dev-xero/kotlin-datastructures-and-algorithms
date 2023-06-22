@@ -66,4 +66,23 @@ class LinkedList<T> {
 
         return false
     }
+
+    fun removeNodeItem(item: T): T? {
+        if (head != null) {
+            var currentNode = head
+            var previousNode: Node<T>? = null
+
+            while (currentNode != null) {
+                if (currentNode.item == item) {
+                    previousNode?.setNextNode(currentNode.next)
+                    return currentNode.item
+                }
+
+                previousNode = currentNode
+                currentNode = currentNode.next
+            }
+        }
+
+        return null
+    }
 }
