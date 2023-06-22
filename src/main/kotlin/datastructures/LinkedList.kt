@@ -50,6 +50,7 @@ class LinkedList<T>() {
 
         currentTail?.setNextNode(newTail)
         tail = newTail
+        listSize += 1
 
         return newTail
     }
