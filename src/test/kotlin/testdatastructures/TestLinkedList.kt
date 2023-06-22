@@ -52,4 +52,14 @@ class TestLinkedList {
 
         assertEquals(linkedList.size, 4)
     }
+
+    @Test
+    fun testLinkedListHeadIsCorrect() {
+        linkedList.addToTail(2)
+        linkedList.addToTail(3)
+        linkedList.addToHead(1)
+        linkedList.addToTail(4)
+
+        assertEquals(linkedList.headNode?.item, 1)
+    }
 }
