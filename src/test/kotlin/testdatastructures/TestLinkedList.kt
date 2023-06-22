@@ -88,4 +88,14 @@ class TestLinkedList {
         assertEquals(linkedList.tailNode?.item, 4)
         assertEquals(linkedList.tailNode?.next?.item, null)
     }
+
+    @Test
+    fun testContainNodeItemReturnsCorrectly() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+        assertFalse(linkedList.containsNodeItem(3))
+
+        linkedList.addToTail(3)
+        assertTrue(linkedList.containsNodeItem(3))
+    }
 }
