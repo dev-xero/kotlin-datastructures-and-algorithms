@@ -71,4 +71,21 @@ class TestLinkedList {
 
         assertEquals(linkedList.tailNode?.item, 4)
     }
+
+    @Test
+    fun testLinkedListPointsToCorrectNode() {
+        linkedList.addToTail(1)
+        linkedList.addToTail(2)
+        linkedList.addToTail(3)
+        linkedList.addToTail(4)
+        linkedList.addToHead(0)
+
+        assertEquals(linkedList.headNode?.item, 0)
+        assertEquals(linkedList.headNode?.next?.item, 1)
+        assertEquals(linkedList.headNode?.next?.next?.item, 2)
+        assertEquals(linkedList.headNode?.next?.next?.next?.item, 3)
+        assertEquals(linkedList.headNode?.next?.next?.next?.next?.item, 4)
+        assertEquals(linkedList.tailNode?.item, 4)
+        assertEquals(linkedList.tailNode?.next?.item, null)
+    }
 }
