@@ -1,7 +1,9 @@
 package testdatastructures
 
 import datastructures.LinkedList
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeEach
+import org.junit.jupiter.api.Test
 
 class TestLinkedList {
     private lateinit var linkedList: LinkedList<Int>
@@ -9,5 +11,10 @@ class TestLinkedList {
     @BeforeEach
     fun setup() {
         linkedList = LinkedList()
+    }
+
+    @Test
+    fun testLinkedListEmptyReturnsTrue() {
+        assertTrue(linkedList.isEmpty())
     }
 }
