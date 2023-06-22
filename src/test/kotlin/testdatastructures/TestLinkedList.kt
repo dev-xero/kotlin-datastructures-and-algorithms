@@ -42,4 +42,14 @@ class TestLinkedList {
 
         assertEquals(linkedList.size, 2)
     }
+
+    @Test
+    fun testListSizeUpdatesCorrectlyAfterAdding() {
+        linkedList.addToHead(2)
+        linkedList.addToHead(1)
+        linkedList.addToTail(3)
+        linkedList.addToTail(4)
+
+        assertEquals(linkedList.size, 4)
+    }
 }
